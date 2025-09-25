@@ -1,9 +1,9 @@
-#🧤 스마트 장갑 Server 코드
+# 🧤 스마트 장갑 Server 코드
 
 스마트 장갑에서 전송된 데이터를 저장하고 보호자 앱/웹에 제공하는 서버 코드입니다.
 (Node.js + MySQL + Firebase 기반)
 
-##⚙️ 주요 기능
+## ⚙️ 주요 기능
 
  - 사용자/보호자 회원가입 및 로그인
 
@@ -17,7 +17,7 @@
 
  - RESTful API 제공 (Flutter 앱/웹 연동)
 
-##📂 프로젝트 구조
+## 📂 프로젝트 구조
 server_midas/
 <br>┣ 📜 server.js # 메인 서버 실행 파일
 <br>┣ 📂 routes/ # API 라우터
@@ -25,7 +25,7 @@ server_midas/
 <br>┣ 📂 config/ # DB/Firebase 설정
 <br>┗ 📜 package.json # npm 패키지 관리
 
-##🗄️ 데이터베이스 구조
+## 🗄️ 데이터베이스 구조
 
  - user : 사용자/보호자 계정 정보
 
@@ -35,11 +35,11 @@ server_midas/
 
  - motion_data : 손가락/모션 센서 데이터
 
-##🌐 서버 접근
+## 🌐 서버 접근
 
  - 외부망 (도메인 연결) : https://midas.p-e.kr
 
-##🚀 실행 방법
+## 🚀 실행 방법
 1. 의존성 설치
 npm install
 
@@ -61,7 +61,7 @@ pm2 stop midas-server
 pm2 startup
 pm2 save
 
-##🔔 기타
+## 🔔 기타
 
 라즈베리 서버 환경: Raspberry Pi 5 + DietPi + Node.js + MySQL
 
@@ -69,8 +69,8 @@ pm2 save
 
 보호자 앱/웹에서 API 호출을 통해 실시간 위치, 장갑 상태, 이벤트 내역 조회 가능
 
-##📡 API 엔드포인트 목록
-##🧑 사용자/보호자 계정
+## 📡 API 엔드포인트 목록
+## 🧑 사용자/보호자 계정
 회원가입
 POST /api/register
 
@@ -128,7 +128,7 @@ Response
 
 { "success": true, "message": "연동 완료" }
 
-###📍 위치 관련
+### 📍 위치 관련
 위치 저장
 POST /api/position
 
@@ -159,7 +159,7 @@ Response
   }
 ]
 
-###🖐️ 장갑 상태
+### 🖐️ 장갑 상태
 BLE 상태 저장
 POST /api/glove-status
 
@@ -189,7 +189,7 @@ Response
 
 { "success": true, "message": "모션 데이터 저장 완료" }
 
-###📢 알림 (FCM)
+### 📢 알림 (FCM)
 테스트 푸시 알림
 POST /api/send-test-notification
 
@@ -225,7 +225,7 @@ Response
 
 { "success": true, "message": "이상행동 알림 전송됨" }
 
-###📝 이벤트 로그
+### 📝 이벤트 로그
 이벤트 전체 저장
 POST /api/full-event
 
